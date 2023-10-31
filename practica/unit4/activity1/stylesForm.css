@@ -1,0 +1,129 @@
+/**FULLA D'ESTILS PEL FORM:
+
+**/
+
+
+/*Font face per personalitzar font*/
+@font-face{
+    font-family: 'Agbalumo-Regular';
+    src: url('Agbalumo/Agbalumo-Regular.ttf') format('truetype'); 
+    color:#721121;
+    font-size: 15px;
+}
+
+/*Imagenes por defecto:*/
+img {
+    /* Para dejarlo con transparencia mientras no se seleccione */
+    opacity: 90%;
+    
+  }
+
+  /* Ocultar los radio buttons, 
+  ligado a nulos para deseleccionar com resetButton */
+  input[type="radio"] {
+    display: none; 
+  }
+
+  
+  /*pointer simula como si fuera un enlace visualmente cuando
+  pasas el cursor por encima*/
+  #avatarLabel{
+    cursor: pointer;
+    margin-right: 3%;
+  }
+
+/*transicion, animacion de la imagen que aumenta tamaño en 200 milisegundos
+all para todas*/
+  label img {
+    transition: transform 200ms all;
+    opacity: 80%;
+    
+  }
+
+/*Cuando un botón está seleccionado,
++ selector de adyacencia, lo que se ve afectado con el codigo
+es el img contenido en el label*/
+  input[type="radio"]:checked + label img {
+    transform: scale(1.3);
+    opacity: 100%;
+    border: 2px solid #FF5900;
+  }
+
+/*Efecto hover para cuando se pase el cursor por encima
+provocar la animacion con las caracteristicas del código*/
+  label:hover img {
+    transform: scale(1.3);
+    opacity: 100%;
+    border: 2px solid #721121;
+  }
+
+
+
+/*caracteristicas del form, imagen de fondo*/
+.form{
+    max-width: 80%;
+   justify-content: center;
+   border-radius: 5%;
+   border: 1px solid black;
+   background-image: url(imagenes/feliz.jpg);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   /*opacity: 80%;*/
+}
+
+/*Uso de selectores en los inputs*/
+input[type = text]{
+    text-align: center;
+    max-width: 60%;
+    margin-left: 20%;
+    background-color: #D5C7BC;
+}
+input[type = password]{
+    text-align: center;
+    max-width: 60%;
+    margin-left: 20%;
+    background-color: #D5C7BC;
+}
+input[type = email]{
+    text-align: center;
+    max-width: 60%;
+    margin-left: 20%;
+    background-color: #D5C7BC;
+}
+/*Color de las etiquetas*/
+label{
+    
+    font-family: 'Agbalumo-Regular', sans-serif;
+    color:#721121;
+    font-size: 20px;
+
+}
+
+label[class$="password"]{
+    color:#D5C7BC;
+    font-family: 'Agbalumo-Regular', sans-serif;
+    font-size: 20px;
+}
+
+/*Para el boton del formulario, establecer su margin*/
+[class$= "submit"]{
+    margin-right: 2%;
+}
+
+/*Canvia el color del quadrat del menu*/
+.navbar-toggler{
+    color: #FF5900 !important;
+}
+
+/*Per canviar color de font al menú lateral*/
+.enlaceDesplegable{
+    text-decoration: none;
+    font-family:  'Roboto Mono', monospace;
+    color:#FF5900;
+}
+
+/*Per canviar color de font al menú lateral*/
+h5{
+    font-family:  'Roboto Mono', monospace;
+    color:#D5C7BC;
+}
