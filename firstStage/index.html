@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esquematico</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!--HEADER-->
+    <div class="container-fluid cabecera">
+      <picture>
+        <img
+          src="imagenes/header.png"
+          alt="header"
+          style="width: auto"
+          class="img-fluid"
+        />     
+      </picture>
+    </div>
+
+    <!--CONTENEDOR QUE ENVUELVE TODO EL BODY-->
+    <div class="container-fluid">
+
+
+      <!--GRID PRINCIPAL QUE ESTRUCTURA EL CUERPO PRINCIPAL EN DOS
+      COLUMNAS, 1 PARA IMAGENES Y ARTICULOS,
+    OTRA PARA EL BUSCADOR-->
+      <div class="row">
+        <div class="col-md-9 order-1 order-md-2">
+          <!--EN ESTA FILA EMPIEZAN LAS IMAGENES Y ARTICULOS-->
+
+          <!--primera fila-->
+          <div class="row">
+            <div class="col-md-6">
+              <picture>
+                <img
+                  src="imagenes/image.png"
+                  alt="header"
+                  style="width: auto"
+                  class="img-fluid"
+                />
+              </picture>
+            </div>
+            <div class="col-md-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              provident consequatur magni a deserunt exercitationem iste
+              consectetur beatae magnam quia ullam fugiat, quibusdam sapiente
+              cum aspernatur. Nihil vel itaque nobis similique. Fugiat quasi,
+              perferendis itaque perspiciatis quae veritatis repellendus sunt
+              alias, aperiam temporibus suscipit adipisci in velit dolor enim
+              sit.
+            </div>
+          </div>
+
+
+          <!--SEGUNDA FILA-->
+          <div class="row">
+            <!--PARA INDICAR EL ORDEN EN EL QUE SE POSICIONARAN LOS ELEMENTOS
+          CUANDO LLEGUEN AL BREAKPOINT
+           SINO LOS TEXTOS SE JUNTABAN Y NO QUEDABA BIEN EN MOBILE 
+        -->
+            <div class="col-md-6 order-2 order-md-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              provident consequatur magni a deserunt exercitationem iste
+              consectetur beatae magnam quia ullam fugiat, quibusdam sapiente
+              cum aspernatur. Nihil vel itaque nobis similique. Fugiat quasi,
+              perferendis itaque perspiciatis quae veritatis repellendus sunt
+              alias, aperiam temporibus suscipit adipisci in velit dolor enim
+              sit.
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+              <picture>
+                <img
+                  src="imagenes/image.png"
+                  alt="header"
+                  style="width: auto"
+                  class="img-fluid"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <!--tercera Fila-->
+          <div class="row">
+            <div class="col-md-6">
+              <picture>
+                <img
+                  src="imagenes/image.png"
+                  alt="header"
+                  style="width: auto"
+                  class="img-fluid"
+                />
+              </picture>
+            </div>
+            <div class="col-md-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              provident consequatur magni a deserunt exercitationem iste
+              consectetur beatae magnam quia ullam fugiat, quibusdam sapiente
+              cum aspernatur. Nihil vel itaque nobis similique. Fugiat quasi,
+              perferendis itaque perspiciatis quae veritatis repellendus sunt
+              alias, aperiam temporibus suscipit adipisci in velit dolor enim
+              sit.
+            </div>
+          </div>
+        </div>
+
+        <!--COLUMNA DEL BUSCADOR-->
+          <div class="col-md-3 buscador">
+            <picture>
+              <img
+                src="imagenes/searcher.png"
+                alt="header"
+                style="width: auto"
+                class="img-fluid"
+              />
+            </picture>
+          </div>
+           
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="container-fluid cabecera">
+      <picture>
+        <img
+          src="imagenes/footer.png"
+          alt="footer"
+          style="width: auto"
+          class="img-fluid"
+        />
+      </picture>
+    </div>
+    <!--SEGUNDO ENLACE BOOTSTRAP-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
