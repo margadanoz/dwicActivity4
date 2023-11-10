@@ -1,0 +1,51 @@
+$actionColor: #FF5900;
+$primaryColor: #721121;
+$bodyColor: #D5C7BC;
+$colorInput: #f4b17d;
+$padding: 5%;
+$remarcado: 25px;
+
+// Para botones:
+$theme-colors:(
+    "dark": $actionColor,
+    "primary": $actionColor,
+);
+
+// Para background del body:
+$body-bg: $bodyColor;
+
+// Para el color de los links:
+$link-color: $actionColor;
+
+//Para titulo de la pagina y del menu lateral
+$headings-color: $bodyColor;
+
+//Italic pels titols
+$headings-font-style:italic;
+
+//Para párrafo remarcado en el Index:
+$lead-font-size: $remarcado;
+
+//Background del menu lateral:
+$offcanvas-bg-color: $primaryColor;
+
+//Para background de los inputs del form, afecta a Login
+$input-bg: $colorInput;
+
+//Color para los labels del form, pagina Login:
+$label-bg:$primaryColor;
+
+//Padding del formulario del Index:
+$form-check-padding-start: $padding;
+
+// Importa el archivo de variables de Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+
+
+
+
