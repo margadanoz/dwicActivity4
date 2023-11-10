@@ -1,0 +1,63 @@
+//Declaració variables:
+$medidasImagen: 300px;
+$sizeTitles: 33px;
+$borderColor: 2px  #721121;
+$borderImg: solid;
+$borderValoration: dotted;
+$separacion: 3%;
+$noneCharacteristic: none;
+$effect: scale(1.2);
+
+//Características del artículo:
+.articulo .enlaces{
+    a{
+        text-decoration: $noneCharacteristic;
+        color: #FF5900;
+        margin-right: $separacion;
+        margin-top: $separacion;
+        padding-left: $separacion + 10%;
+        padding-bottom: $separacion + 5%;
+        
+    }  
+    &:hover{
+        color:#cd4d07;
+    } 
+}
+
+.imagenArticulo{
+    width: 100%;
+    border: $borderColor $borderImg;
+}
+
+h1{
+
+    font-size: $sizeTitles;
+    color: #721121;
+}
+
+//Parte de puntuar articulo:
+#valoracion{
+
+    border: $borderColor $borderValoration;
+    border-radius: $separacion + 12%;
+    height: 200px;
+    padding: $separacion;
+    margin-top: $separacion;
+
+    h3{
+        font-size: $sizeTitles - 7;
+        color: #721121;
+    }
+
+    img{
+        max-width: 40px;
+        
+    }
+    
+    img:hover{
+        transform: $effect;
+    }
+    
+}
+
+
