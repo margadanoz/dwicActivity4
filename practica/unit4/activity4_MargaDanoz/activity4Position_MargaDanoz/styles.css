@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+header{
+    text-align: center;
+}
+
+.menu-element{
+    display: inline-block;
+    padding: 5px;
+}
+
+
+.menu-element a, .menu2-element a{
+    color:black;
+    text-decoration: none;    
+}
+
+.menu-element a:hover, .menu2-element a:hover{
+    color:orangered;
+    text-decoration: underline;
+}
+
+header img{
+    width: 20vh;
+    padding-bottom: 10px;
+}
+
+#search{
+    position: absolute;
+    right: 0;
+    
+}
+
+#bottom_header > div > input[type=button]:nth-child(2){
+    position: absolute;
+    right: 0;
+    
+}
+
+/* ASIDE */
+aside {
+    position: absolute;
+    width: 15%;
+}
+
+.list-group {
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.menu2-element {
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+/* SECTION */
+section {
+    margin-left:15%;
+    position: relative;
+    width: 80%;
+}
+
+#products-filter {
+    background-color: gainsboro;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top:0;
+
+}
+
+article {
+    display: inline-block;
+}
+
+article img {
+    width: 300px;
+    height: 400px;
+}
+
+
+.product-name{
+    font-weight: bold;
+    margin-right: 15%;
+}
+
+/* Botones de abajo */
+#back-to-top {
+    position: fixed;
+    bottom:50px;
+    right:60px;
+}
+
+#load-more-products{
+    margin-left:50%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom:20px;
+} 
+
+footer {
+    background-color: gainsboro;
+    text-align: center;
+}
+
+/* AQUI MEDIA QUERYS PARA MOVIL */
+@media screen and (max-width:800px){
+    header{
+        align-items: center;
+        margin-bottom: 3%;
+        overflow:auto;
+    }
+    .menu-element{
+        width: 30%;
+        display: inline-block;
+    }
+
+    main > div {
+        display: block;
+        padding-top: 10px;
+    }
+
+    aside{
+        position: static;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        /* margin-left: 30%; */
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    section{
+        position: relative;
+        margin-left: 15%;
+    }
+
+    .list-group{
+        overflow: auto;
+        display: inline-block;
+
+    }
+
+    .menu2-element{
+        display: inline;
+    }
+}
