@@ -1,0 +1,227 @@
+/**FULLA D'ESTILS PEL FORM:
+
+**/
+
+*{
+  list-style-type: none;
+}
+/*efecto bounce para todos los label*/
+@keyframes bounce{
+
+  /*en funcion del porcentaje de duracion sucede el movimiento
+  del eje vertical*/
+  20%,50%,80%,100%{
+    transform: translateY(0);
+  }
+
+  40%{
+    transform: translateY(-30px);
+  }
+
+  70%{
+    transform: translateY(-15px);
+  }
+
+  90%{
+    transform: translateY(-4px);
+  }
+
+}
+
+/**
+Animacion bounce para label con duracion,
+al no indicar hover ni nada se carga cuando carga la pagina
+*/
+label{
+  /*linear ejecuta animacion a velocidad constante*/
+  animation: bounce 1s linear;
+}
+
+/*Font face per personalitzar font*/
+@font-face{
+    font-family: 'Agbalumo-Regular';
+    src: url('../Agbalumo/Agbalumo-Regular.ttf') format('truetype'); 
+    color:#721121;
+    font-size: 15px;
+    
+}
+
+/*Imagenes por defecto:*/
+img {
+    /* Para dejarlo con transparencia mientras no se seleccione */
+    opacity: 90%;
+    
+  }
+
+  /* Ocultar los radio buttons, 
+  ligado a nulos para deseleccionar com resetButton */
+  input[type="radio"] {
+    display: none; 
+  }
+
+  /*pointer simula como si fuera un enlace visualmente cuando
+  pasas el cursor por encima*/
+  #avatarLabel{
+    cursor: pointer;
+    margin-right: 3%;
+  }
+
+/*transicion, animacion de la imagen que aumenta tamaño en 200 milisegundos
+all para todas*/
+  label img {
+    /*Transició antiga de l'exercici Activity1
+      transition: transform 200ms all;
+    */
+
+    transition: 200ms ease-in;
+    opacity: 80%;
+    
+  }
+
+/*Cuando un botón está seleccionado,
++ selector de adyacencia, lo que se ve afectado con el codigo
+es el img contenido en el label*/
+  input[type="radio"]:checked + label img {
+    transform: scale(1.3);
+    opacity: 100%;
+    border: 2px solid #FF5900;
+  }
+
+/*Efecto hover para cuando se pase el cursor por encima
+provocar la animacion con las caracteristicas del código*/
+/*Transformation está aplicado a la escala de los avatares*/
+  label:hover img {
+    transform: scale(1.3);
+    opacity: 100%;
+    rotate:(-20deg);
+    border: 2px solid #721121;
+  }
+
+/*caracteristicas del form, imagen de fondo*/
+.form{
+    max-width: 80%;
+   justify-content: center;
+   border-radius: 5%;
+   border: 1px solid black;
+   background-image: url(../imagenes/feliz.jpg);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   /* background-size: cover; */
+   /*opacity: 80%;*/
+}
+
+/*Uso de selectores en los inputs*/
+/*Degradado en el color del background de los inputs*/
+input[type = text]{
+    text-align: center;
+    max-width: 60%;
+    margin-left: 20%;
+    background-image: linear-gradient(#f4b17d, #D5C7BC);
+    
+}
+input[type = password]{
+    text-align: center;
+    max-width: 60%;
+    margin-left: 20%;
+    background-image: linear-gradient(#f4b17d, #D5C7BC);
+}
+input[type = email]{
+    text-align: center;
+    max-width: 60%;
+    margin-left: 20%;
+    background-image: linear-gradient(#f4b17d, #D5C7BC);
+}
+
+/*Color de las etiquetas*/
+/*Utilización de text-shadow en los labels*/
+label{
+    
+    font-family: 'Agbalumo-Regular', sans-serif;
+    color:#721121;
+    font-size: 20px;
+    text-shadow: 1px 1px #FF5900;
+
+}
+
+label[class$="password"]{
+    color:#D5C7BC;
+    font-family: 'Agbalumo-Regular', sans-serif;
+    font-size: 20px;
+}
+
+label.etiquetaRol {
+  color:#D5C7BC;
+  font-family: 'Agbalumo-Regular', sans-serif;
+  font-size: 20px;
+}
+
+/*Para el boton del formulario, establecer su margin*/
+[class$= "submit"]{
+    margin-right: 2%;
+}
+
+/*Canvia el color del quadrat del menu*/
+.navbar-toggler{
+    color: #FF5900 !important;
+}
+
+/*Per canviar color de font al menú lateral*/
+.enlaceDesplegable{
+    text-decoration: none;
+    font-family:  'Roboto Mono', monospace;
+    color:#FF5900;
+}
+
+/*Per canviar color de font al menú lateral*/
+h5{
+    font-family:  'Roboto Mono', monospace;
+    color:#D5C7BC;
+}
+
+/* Parte agregada con display para indexedDB */
+.muestraUsuarios{
+  background-color: #721121;
+  margin: 3%;
+  width: 90%;
+  padding: 3%;
+  border-radius: 10px;
+  color: white;
+  display: none;
+}
+/* Botones del display de lectura de usuarios*/
+button[id^="edit_"], [id^="delete_"]{
+  background-color: #FF5900;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 2%;
+  color: white;
+}
+
+button[id^="edit_"]:hover,button[id^="delete_"]:hover{
+  background-color: #f4b17d;
+}
+
+button[id^="edit_"]{
+  margin-left: 2%;
+}
+
+#avatar3-img{
+  cursor: pointer;
+}
+
+#avatar2-img{
+  cursor: pointer;
+}
+
+#avatar1-img{
+  cursor: pointer;
+}
+
+#nombreUsuario{
+  font-family:  'Roboto Mono', monospace;
+  color:#D5C7BC;
+  margin-left: 10px;
+}
+
+
+
