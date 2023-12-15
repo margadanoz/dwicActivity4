@@ -1,0 +1,16 @@
+*{
+    margin: 0 auto;
+}
+
+main{
+    width: fit-content;
+    margin-top:5%;
+}
+
+canvas{
+    width: 750px;
+    height: 600px;
+    padding: 50px;
+    border:5px dashed lightblue;
+
+}
