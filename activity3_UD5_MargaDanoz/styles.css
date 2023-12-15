@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Preahvihear&family=Press+Start+2P&display=swap');
+
+body{
+    background-color: #85D5BC;
+    font-family: 'Lato';
+}
+
+
+main{
+    margin-top: 200px;
+}
+
+canvas{
+    background-color: white;
+    border: 5px double #FFEEDB;
+}
+
+#speedX, #speedY{
+    border-radius:10px;
+}
+
+#stopButton, #runButton{
+    border-radius: 10px;
+    background-color: #FFEEDB;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#stopButton:hover, #runButton:hover{
+    border-radius: 10px;
+    background-color: #d39855;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#divButtons{
+    margin-top: 10px;
+}

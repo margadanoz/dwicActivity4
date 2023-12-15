@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2d animation</title>  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main style="text-align: center;">
+    <!--Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7111">Pixabay</a>-->
+    <audio id="boing" src="audio/jews_harp_boing-7111.mp3"></audio>
+    <canvas width="320" height="220" id="2d-animation-canvas"></canvas>
+    <div id="divButtons">
+      <button onclick="stop()" id="stopButton">Stop</button>
+      <button onclick="run()" id="runButton">Run</button>
+    </div>
+    <label for="">Speed X</label>
+    <input type="number" style="margin-top:5px;" size="5px" id="speedX">
+    
+    <input type="number" style="margin-top:5px;" size="5px" id="speedY">
+    <label for="">Speed Y</label>
+  </main>
+
+  <script src="2d_animation.js"></script> 
+</body>
+</html>
