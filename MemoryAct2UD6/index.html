@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+            justify-content: center;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: #FBD87F;
+        }
+
+        #content {
+        text-align: center;
+        }
+
+        #container {
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            justify-content: center;
+            background-color: #C7E5DD;
+            width: 80%;
+            align-items: center;
+            border: 3px solid #5FB49C;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #container div{
+            background-color: white;
+            border: 3px double #2E294E;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: 30px;
+            justify-content: center;
+            flex-flow: row wrap;
+            line-height: 100px;
+            border-radius: 5px;
+        }
+        #container div:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            border-color: #FBD87F;
+        }
+        
+        .ganador .numerosOcultos {
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <!-- Todo contenido viene de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
