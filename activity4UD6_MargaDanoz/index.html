@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Para poder redimensionar, sin esto no funciona resizable() -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            max-width: 100%;
+            justify-content: flex-end;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: #FBD87F;
+        }
+        #containerPrincipal{
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            justify-content: flex-end;
+            background-color: #C7E5DD;
+            width: 100%;
+            align-items: center;
+            border: 3px solid #5FB49C;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #containerNotas{
+            border: #2E294E;
+            background-color: #2E294E;
+            width: 500px;
+            height: 600px;
+            margin: 10px;
+            text-align: center;
+            justify-content: center;     
+            border-radius: 5px;
+            position: absolute;
+            left: 0;
+            flex-flow:row wrap;
+            display: flex;
+        }
+
+        #container1,#container2{
+            background-color: lightblue;
+            border: 3px double #2E294E;
+            width: 300px;
+            height: 600px;
+            margin: 10px;
+            text-align: top;
+            font-size: 15px;
+            justify-content: center;
+            display: inline-block;
+            line-height: 100px;
+            border-radius: 5px;
+            margin-right: 100px;
+            /* position: relative; */
+        }
+
+        #container1{
+            background-color: lightblue;
+        }
+
+        #container2{
+            background-color: lightgreen;
+        }
+
+        #crearNota{
+            position: absolute;
+            top: 0;
+            left: 10px;
+            margin-top: 20px;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+        #crearNota:hover{
+            cursor: pointer;
+        }
+
+        #textoContainer1,#textoContainer2{
+            position: fixed;
+            top:0;
+            margin-top: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
