@@ -1,0 +1,169 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+
+    background-color: #114B5F;
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+header > h1{
+    margin-left: 50px;
+    border-bottom: 2px solid white;
+}
+
+
+body{
+
+    background-color: #A6D3A0;
+}
+
+/* Referente al buscador */
+#buscador{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+input[type="text"]{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    width:200px;
+}
+
+#buscadorBoton{
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #114B5F;
+    color: white;
+    /* text-shadow: 1px 2px 5px; */
+}
+
+#buscadorBoton:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* retorno deñl buscador, div principal */
+#retornoBuscador {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+}
+
+
+/* div por donde saldrán los artistas */
+#artistasRetornados,#cancionesRetornadas{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #114B5F;
+    color: white;
+    max-width: 40%;
+}
+
+
+#titulos{
+    margin-top: 20px;
+    border-bottom:2px solid white;
+    background-color: #114B5F;
+    color: white;
+    margin-bottom:50px;  
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+#imgArtist,#imgCanciones{
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+/* modal, inmatges, pels albums */
+.modal > img{
+
+    width: 100px;
+    max-width: 100px;
+    height:100px;
+}
+
+#imgAlbum{
+    width: 100px;
+    max-width: 100px;
+    height:100px;
+    cursor: pointer;
+}
+
+#noResults{
+    text-align: center;
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}
+
+a:hover{
+    color: lightblue;
+}
+
+
+/* AJUSTE CON MEDIA QUERYS PARA VERSION MOVIL */
+@media screen and (max-width:800px){
+
+        #retornoBuscador{
+            display: flex;
+            flex-flow:column wrap;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        #artistasRetornados{
+            display:flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        /* pel div agregat per mostrar els artistes */
+        .artistId,#songsInfo{
+            display: flex;
+            flex-flow: column wrap;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #imgArtist,#imgCanciones{
+            width: 100px;
+            height: 100px;
+        }
+}
+
+
+
+
+
+
+

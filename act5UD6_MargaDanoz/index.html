@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+        <header>
+                <h1>Spotify searcher</h1>
+        </header>
+
+        <main>
+            <div id="buscador">
+                <input type="text" placeholder="search artist or song" id="inputBuscador">
+                <button id="buscadorBoton">Search</button>
+            </div>
+<!-- Modal para albums y canciones de esos albums-->
+            <div id="ex1" class="modal">
+                <!-- para cerrar el modal -->
+                <a href="#" rel="modal:close"></a>
+            </div>
+
+            <div id="noResults">
+                <h4>There are no matching results</h4>
+            </div>
+
+            <div id="titulos">
+                <h1>Artists</h1>
+                <h1>Songs</h1>  
+            </div>
+
+            <div id="retornoBuscador">
+                <div id="artistasRetornados">
+                </div>
+
+                <div id="cancionesRetornadas">
+               </div>
+            </div>
+            
+        </main>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <script src="script.js"></script>
+</body>
+</html>
