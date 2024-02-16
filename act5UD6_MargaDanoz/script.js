@@ -1,5 +1,5 @@
-let clientId = 'e18b07ec08f4454f8fd09a39d0a4aae0';
-let clientSecret = '5d785afb155d465fbb7832744771cecc';
+let clientId = '';
+let clientSecret = '';
 let access_token = '';
 // per si no hi ha imatge posar una per defecte
 let rutaImagen = '/cascos.jpg';
