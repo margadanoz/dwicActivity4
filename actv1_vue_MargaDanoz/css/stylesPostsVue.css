@@ -1,0 +1,36 @@
+/* PART DE VUE DELS POSTS */
+/* CENTRAR EL CONTRENEDOR DE LOS MENSAJES */
+*{
+    list-style-type: none;
+}
+#posts{
+    display: flex;
+    flex-flow:row wrap;
+    /* margin: 50px; */
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#postButton,#editingButton,#deleteButton{
+    background-color: #FF5900 !important;
+    margin: 10px;
+}
+
+span{
+    font-size: 14px;
+}
+
+#error{
+    /* display: none; */
+    color: red;
+}
+
+#imagenPost{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #721121;
+}

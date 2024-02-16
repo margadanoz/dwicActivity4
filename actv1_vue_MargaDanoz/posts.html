@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- cdn bootstrap -->
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- cdn de vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- css propi -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesPostsVue.css">
+</head>
+<body>
+        <!--Header-->
+        <header class="container-fluid">
+            <nav class="navbar row">
+              <nav class="navbar col-5" href="#">
+                <img class="logo"
+                  src="imagenes/logo.png"
+                  alt="Bootstrap"
+                  width="145"
+                  height="145"
+                />
+                <span class="h1 bounce" style="margin-left: 20px">Travel Doggie</span>
+              </nav>
+              <div class="col-5">          
+                <div class="contenidoUsuario">
+                  <img src="" alt="" class="img-fluid" id="avatarUsuario" width="40vh;">
+                  <p id="nombreUsuario"></p>
+                </div>
+              </div>
+              <div class="col-2">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#menuLateral"
+                >
+                  <img
+                    src="imagenes/grup.png"
+                    alt=""
+                    class="img-fluid"
+                    id="iconMenuButton"
+                    style="max-width: 5vh"
+                  />
+                </button>
+                <!--Menú lateral-->
+                <div
+                  class="offcanvas offcanvas-end"
+                  id="menuLateral"
+                  tabindex="-1"
+                  style="background-color: #721121"
+                >
+                  <div class="offcanvas-header" data-bs-theme="dark">
+                    <h5>Menu</h5>
+                    <button
+                      class="btn-close"
+                      type="button"
+                      aria-label="Close"
+                      data-bs-dismiss="offcanvas"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <a href="index.html" class="enlaceDesplegable">Home</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="form.html" class="enlaceDesplegable">Register</a>
+                      </li>
+                      <li class="list-group-item" class="enlaceDesplegable login">
+                        <a href="loginForm.html" class="enlaceDesplegable login">Login</a>
+                      </li>
+                      <li class="list-group-item" class="enlaceDesplegable logout">
+                        <a href="#" class="enlaceDesplegable logout" id="logout">Logout</a>
+                      </li>
+                      <li class="list-group-item" class="enlaceDesplegable admin">
+                        <a href="admin.html" class="enlaceDesplegable admin" id="admin">Admin</a>
+                      </li>
+                      <li class="list-group-item" class="enlaceDesplegable settings">
+                        <a href="settings.html" class="enlaceDesplegable settings" id="settings">Settings</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>   
+               <!-- part de vue -->
+          <!-- Part del cos per editar, pubklicar i eliminar posts -->
+          <div id="posts">
+            <div id="divForm">
+              <h1>{{ !toPost ? 'Post Comments' : 'Edit comment' }}</h1>
+              <form>
+                <input class="form-control" v-model="form.title" name="title" id="title" placeholder="Title"><br>
+                  <textarea class="form-control" v-model="form.comment" placeholder="New post..." name="comment" id="comment"></textarea><br>
+                  <input class="form-control" v-model="form.name" name="name" id="name" placeholder="Author"><br>
+                  <label for="form-control" class="form-label">Choose one image:</label>
+                  <input class="form-control" type="file" id="image" name="image" id="inputImagen" @change="asignarImagen">
+                  <small id="error" v-show="showError">You have to fill out all the fields before sending your post</small><br>
+                  <!-- @click forma abreviada de v-on,aqui crida funció en lloc d'enviar formulari automatricament -->
+                  <button class="btn btn-primary" @click.prevent="postComment" id="postButton">Post</button>
+              </form>
+            </div>
+            <!-- <h1 v-if="!toPost">Post Comments</h1>
+            <h1 v-else>Edit comment</h1> -->
+            <div id="contenidoPosts">
+              <ul>
+                <!-- :key === v-bind:key -->
+                  <li v-for="(comment, index) in comments" :key="index">
+                      <div style="text-align: center;">
+                          <h4>{{comment.title}}</h4>
+                          <p>{{ comment.comment }}</p>
+                          <p><span>Author:</span>{{ comment.name }}</p>
+                          <p><span>Publication date:</span>{{ comment.date }}</p>
+                     <!-- comprovem si hi ha imatge guardada al comentari  -->
+                          <img v-if="comment.image !== null" :src="comment.image" id="imagenPost"></img>
+                          <button v-show="comment.mostrarBotones" id="deleteButton" class="btn btn-primary" @click="editPost(comment,comment.commentId)">Edit</button>
+                          <button v-show="comment.mostrarBotones" id="editingButton" class="btn btn-primary" @click="deletePost(comment.commentId)">Delete</button>
+                      </div>
+                  </li>
+              </ul>
+            </div>
+        </div>              
+    
+    <!--LINK A BOOSTRAP-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/scriptPostsVue.js" type="module"></script>
+</body>
+</html>
