@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Doggie</title>
+    <!--LINK A BOOTSTRAP-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
+    <!--MI DOCUMENTO CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+     <!--Hoja de estilos especifica del form-->
+     <link rel="stylesheet" href="css/stylesForm.css" />
+  </head>
+
+  <body class="temaClaro">
+
+        <!-- Injecció codi desde vue -->
+        <div id="app">
+          <Header-nou imatge="imagenes/logo.png" :linkhome="linkhome" :linkregister="linkregister" :linklogin="linklogin" :linkadmin="linkadmin" :linksettings="linksettings" :linkposts="linkposts"></Header-nou>
+      </div>
+
+ 
+
+    <nav class="container-fluid justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-4 justify-content-center mt-5">
+                <div class="form" style="text-align: center;">
+                    <label for="userName" class="form-label">User Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userNameLogin"
+                      name="userName"
+                    />
+
+                    <div style="margin-bottom: 2%;">
+                        <label for="password" class="form-label password">Password</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="passwordLogin"
+                          name="password"
+                          placeholder="********"
+                        />
+                        <div class="container-fluid d-flex justify-content-center mt-3">
+                            <button class="btn btn-primary submit" id="loginButton" type="submit">Login</button>
+                        </div>
+                  </div>
+                </div>
+                    <!-- Para aviso cuando está mal la contraseña -->
+          <div class="row">
+            <div class="col-md-4 justify-content-center mt-1 errorLogin">
+              Your information is incorrect. Please try again.
+            </div>
+          </div>
+        </div>
+  </div>
+</nav>
+
+    <!--footer-->
+  <div id="pie">
+    <Pie></Pie>
+  </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+       <!-- Link a biblioteca de encriptacion -->
+    <script src="sjcl-master/sjcl.js"></script>
+    <script src="../scripts/scriptHeader.js" type="module"></script>
+      <script src="../scripts/scriptIniciarBD.js" type="module"></script>
+      <script src="../scripts/scriptLogin.js" type="module"></script>
+      <script src="scripts/scriptFooter.js" type="module"></script>
+    </body>
+  </html>
+  

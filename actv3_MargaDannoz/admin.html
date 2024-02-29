@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Doggie</title>
+    <!--LINK A BOOTSTRAP-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
+    <!--MI DOCUMENTO CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <!--COLOR PAGINA, CUERPO-->
+  <body class="temaClaro">
+    <div id="app">
+      <Header-nou imatge="imagenes/logo.png" :linkhome="linkhome" :linkregister="linkregister" :linklogin="linklogin" :linkadmin="linkadmin" :linksettings="linksettings" :linkposts="linkposts"></Header-nou>
+  </div>
+
+    <body id="bodyAdmin">
+      <div class="container-fluid mt-5" id="contenedorInfo1">
+        <div class="listaBaseDatos" id="contenedorInfo2">
+          <div  style="padding: 5px;">
+            <button class="btn btn-primary" id="temaToggle2">Switch to dark theme</button>
+          </div>
+          <div style='margin-bottom:2%; text-align:center;justify-content:center'>
+            <form id='formEdit' class='form' style='padding:10px;'>
+                <label for='edit_nombreUsuario' class='form-label'>User Name:</label>
+                <input type='text' id='edit_nombreUsuario' placeholder='NombreUsuario' class='form-control-sm'><br>
+                <label for='edit_rol'>Rol:</label>
+                <div class='form-check'>
+                    <input class='form-check-input' type='radio' name='edit_rol' id='edit_rol_usuario' value='usuario' checked>
+                    <label class='form-check-label' for='edit_rol_usuario'>User</label>
+                </div>
+                <div class='form-check'>
+                    <input class='form-check-input' type='radio' name='edit_rol' id='edit_rol_admin' value='administrador'>
+                    <label class='form-check-label' for='edit_rol_admin'>Administrator</label>
+                </div><br>
+                
+                <label for='edit_conectado'>Conected:</label>
+                <input type='text' id='edit_conectado' class='form-control-sm' readonly><br>
+                <label for='edit_email'>Email:</label>
+                <input type='email' id='edit_email' placeholder='correo@example.com' class='form-control-sm'><br>
+                <label for='edit_id'>ID:</label>
+                <input type='text' id='edit_id'class='form-control-sm' readonly><br>
+                <label for='avatarActual'>Current avatar: </label>
+                <img src='' alt='Avatar' style='width: 10vh;' id='avatarActual' style='margin-bottom:5px;border-radius:5px;width:50%;'><br>
+                <label style='margin-top:10px;'>Choose Avatar:</label>
+                <input type='radio' name='avatarRadio' id='avatar1' value='imagenes/avatar1.png'>
+                <label for='avatar1'><img src='imagenes/avatar1.png' alt='Avatar 1' style='width: 5vh;'></label>
+                <input type='radio' name='avatarRadio' id='avatar2' value='imagenes/avatar2.png'>
+                <label for='avatar2'><img src='imagenes/avatar2.png' alt='Avatar 2' style='width: 5vh;'></label>
+                <input type='radio' name='avatarRadio' id='avatar3' value='imagenes/avatar4.jpeg'>
+                <label for='avatar3'><img src='imagenes/avatar4.jpeg' alt='Avatar 3' style='width: 5vh;margin-bottom:5px;'></label><br>
+                <!-- <button type='button' user_id='' id='save_changes'style='margin-top:5px;'>Save Changes</button> -->
+            </form>
+            <hr>
+        </div>
+    
+          <div class="cajaInfo" id="contenedorInfo3" style="margin-bottom: 150px;">
+              <!-- Aqui se imprimira contenido de la database -->             
+          </div>
+      </div>
+      </div>
+  </body>
+    
+
+    <!--footer-->
+    <div id="pie">
+      <Pie></Pie>
+    </div>
+  
+      <!--LINK A BOOSTRAP-->
+      
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+      <script src="scripts/scriptHeader.js" type="module"></script>
+      <script src="scripts/scriptIniciarBD.js" type="module"></script>
+      <script src="scripts/scriptAdminPagPrincipal.js" type="module"></script>
+      <script src="scripts/scriptFooter.js" type="module"></script>
+
+    </body>
+  </html>
+  

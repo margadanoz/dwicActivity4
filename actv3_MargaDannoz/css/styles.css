@@ -1,0 +1,232 @@
+/**
+IMPORTS DE LAS FUENTES:
+**/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+/*Animacion heartBeat para logo en home*/
+@keyframes heartbeat {
+
+    to{transform: scale(1.2);}
+    
+}
+
+#pie{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo{
+    /*alternate per millor efecte, sino parpadea molt*/
+    animation: heartbeat .25s alternate;
+    /*Númerod e veces que se repite la animacion*/
+    animation-iteration-count: 4;
+}
+
+body{
+    background-color: #D5C7BC;
+}
+
+.navbar{
+    font-family: Roboto serif, serif;
+    color: #D5C7BC;
+}
+
+.navbar{
+    background-color: #721121;
+}
+
+img .foto1{
+    max-height: 200px !important;
+    max-width: 600px !important; 
+    
+}
+
+.formulario{
+
+    border: 1px solid black;
+    border-radius: 10%;
+    background-color: #721121;
+    align-items: center;
+    justify-content: center;
+    margin:5%;
+    padding:8%;
+    font-family: 'Montserrat';
+    color: #D5C7BC;
+}
+
+.casilla{
+    margin-left: 12%;
+}
+
+.boton{
+    background-color: #FF5900;
+    border-radius: 10%;
+    font-family: Montserrat;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    color: #721121;
+}
+
+p{
+    font-family: 'Roboto Mono', monospace;
+    color:#721121
+}
+
+/**
+PARA MARGEN EN FOOTER
+**/
+.contacto{
+    margin-top: 2%;
+    padding-top: 1%;
+}
+
+.contactoTexto{
+    color: #FF5900;
+    text-decoration: none !important;
+    font-family: 'Montserrat';  
+    font-size: 20px;
+    margin-left: 80%;
+}
+
+.menu svg{
+    color:#FF5900;
+
+}
+
+.iconoFooter1 svg{
+    color: #FF5900;
+    /**margin-left: 80%;*/
+}
+
+.iconoFooter2{
+    color: #FF5900;
+    
+}
+
+.footer{
+    height: 50px;
+    
+}
+
+
+/*Canvia el color del quadrat del menu*/
+.navbar-toggler{
+    color: #FF5900 !important;
+}
+
+/*Per canviar color de font al menú lateral*/
+.enlaceDesplegable{
+    text-decoration: none;
+    font-family:  'Roboto Mono', monospace;
+    color:#FF5900;
+}
+
+/*Per canviar color de font al menú lateral*/
+h5{
+    font-family:  'Roboto Mono', monospace;
+    color:#D5C7BC;
+}
+
+.contenidoUsuario{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+#nombreUsuario{
+    font-family:  'Roboto Mono', monospace;
+    color:#D5C7BC;
+    margin-left: 10px;
+  }
+/* Para Logout, solo se mostrará si el usuario está conectado */
+#logout{
+
+    display: none;
+}
+
+#mostrarInfoUsuario{
+
+    background-color: #721121;
+    color: #D5C7BC;
+    margin-top: 100px;
+    margin-left: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+/* STYLES PER PAG ADMIN */
+
+#contenedorInfo1{
+    width: 50%;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+#contenedorInfo2{
+    width: 100%;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+#contenedorInfo3{
+    width: 100%;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+.cajaInfo{
+    color: #D5C7BC;
+    border-radius: 10px;
+}
+.listaBaseDatos{
+    background-color: #721121;
+    border-radius: 10px;
+    color: #D5C7BC;
+    border-radius: 10px;
+}
+
+#admin{
+    display: none;
+}
+
+/* Para panel que muestra error en el login,pagina de LOGIN */
+.errorLogin{
+    background-color: #721121;
+    color: #D5C7BC;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* Para hacer visible el enlace de settings cuando logee el usuario */
+#settings{
+    display: none;
+}
+
+.temaOscuro{
+    background-color: rgba(0,0,0,0.3);
+}
+
+#temaToggle2,#temaToggle,#addUser,#resetButton,#loginButton{
+    background-color: #FF5900;
+}
+
+
+
+
+
+
+
+
+

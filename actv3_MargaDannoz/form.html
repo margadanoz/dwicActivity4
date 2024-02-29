@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Doggie</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
+    <!--Hoja de estilos principal para header y footer-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--Hoja de estilos especifica del form-->
+    <link rel="stylesheet" href="css/stylesForm.css" />
+  </head>
+  <body class="temaClaro">
+
+    <div id="app">
+      <Header-nou imatge="imagenes/logo.png" :linkhome="linkhome" :linkregister="linkregister" :linklogin="linklogin" :linkadmin="linkadmin" :linksettings="linksettings" :linkposts="linkposts"></Header-nou>
+  </div>
+
+    <!--Formulari de la pàgina-->
+    <div class="container-fluid">
+      <div class="row justify-content-center pt-5 text-center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 p-2 form">
+          <div style="margin-bottom: 2%;">
+            <label for="userName" class="form-label">User Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="userName"
+              name="userName"
+            />
+          </div>
+          <div style="margin-bottom: 2%;">
+            <label for="emailUser" class="form-label">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emailUser"
+              name="email"
+             
+            />
+          </div>
+          <div style="margin-bottom: 2%;">
+            <label for="password" class="form-label password">Password</label>
+            <input
+              type="text"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="********"
+            />
+          </div>
+          <div style="margin-bottom: 3%;">
+  
+          </div>
+          <div class="form-group" style="margin-bottom: 3%;">
+            <label for="usuario" class="form-label etiquetaRol">Usuario</label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="usuario"
+              class="rol"
+              name="usuario"
+            />
+            <label for="usuario" class="form-label etiquetaRol">Administrador</label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="administrador"
+              class="rol"
+              name="administrador"
+            />
+          </div>
+          
+
+          <!--Imágenes para los avatares, modificado vh aquí-->
+          <input type="radio" id="avatar1" name="seleccion" value="avatar1" />
+<label for="avatar1" id="avatarLabel1">
+    <img src="imagenes/avatar1.png" alt="" style="max-width: 5vh" id="avatar1-img"/>
+</label>
+
+<input type="radio" id="avatar2" name="seleccion" value="avatar2" />
+<label for="avatar2" id="avatarLabel2">
+    <img src="imagenes/avatar2.png" alt="" style="max-width: 5vh" id="avatar2-img"/>
+</label>
+
+<input type="radio" id="avatar3" name="seleccion" value="avatar3" />
+<label for="avatar3" id="avatarLabel3">
+    <img src="imagenes/avatar4.jpeg" alt="" style="max-width: 5vh" id="avatar3-img"/>
+</label>
+          <!--Botones nulos para deseleccionar los otros cuando se pulse resetButton-->
+          <input
+            type="radio"
+            id="nulo"
+            name="seleccion"
+            value="null"
+            style="display: none"
+          />
+          <div class="container-fluid d-flex justify-content-center mt-3">
+            <button class="btn btn-primary submit" id="addUser" type="submit">Register</button>
+            <!--Reset para reestablecer los campos a valor predeterminado, 
+            queria que reestableciera solo botones, pero borra todos los campso-->
+            <button type="reset" class="btn btn-primary" id="resetButton">
+              Reset
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="muestraUsuarios">
+                  <ul id="users-ul">       
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pie">
+      <Pie></Pie>
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link a biblioteca de encriptacion -->
+    <script src="sjcl-master/sjcl.js"></script>
+    <script src="scripts/scriptHeader.js" type="module"></script>
+    <script src="scripts/scriptIniciarBD.js" type="module"></script>
+    <script src="scripts/scriptRegister.js" type="module"></script>
+    <script src="scripts/scriptFooter.js" type="module"></script>
+
+  </body>
+</html>

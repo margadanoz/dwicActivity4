@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Doggie</title>
+    <!--LINK A BOOTSTRAP-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
+    <!--MI DOCUMENTO CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <!--COLOR PAGINA, CUERPO-->
+  <body class="temaClaro">
+
+    <div id="app">
+      <Header-nou :imatge="imatge" :linkhome="linkhome" :linkregister="linkregister" :linklogin="linklogin" :linkadmin="linkadmin" :linksettings="linksettings" :linkposts="linkposts"></Header-nou>
+  </div>
+  
+   <!--CUERPO DE LA PAGINA-->
+   <div class="container-fluid" style="margin-bottom: 100px;">
+    <div class="row mt-4 mb-4">
+      <div class="col-12 col-md-9 order-1 order-md-2">
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <picture>
+              <img
+                src="imagenes/viajes.jpg"
+                alt="header"
+                style="width: auto"
+                class="img-fluid"
+              />
+            </picture>
+          </div>
+          <div class="col-md-6">
+            <h1 class="title">Lorem ipsum...</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              provident consequatur magni a deserunt exercitationem iste
+              consectetur beatae magnam quia ullam fugiat, quibusdam sapiente
+              cum aspernatur. Nihil vel itaque nobis similique. Fugiat quasi,
+              perferendis itaque perspiciatis quae veritatis repellendus sunt
+              alias, aperiam temporibus suscipit adipisci in velit dolor enim
+              sit.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6 order-2 order-md-1">
+            <h1 class="title">Lorem ipsum...</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              provident consequatur magni a deserunt exercitationem iste
+              consectetur beatae magnam quia ullam fugiat, quibusdam sapiente
+              cum aspernatur. Nihil vel itaque nobis similique. Fugiat quasi,
+              perferendis itaque perspiciatis quae veritatis repellendus sunt
+              alias, aperiam temporibus suscipit adipisci in velit dolor enim
+              sit.
+            </p>
+          </div>
+          <div class="col-md-6 order-1 order-md-2">
+            <picture>
+              <img
+                src="imagenes/frenchie.jpg"
+                alt="header"
+                style="width: auto"
+                class="img-fluid"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <!--tercera Fila-->
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <picture>
+              <img
+                src="imagenes/feliz.jpg"
+                alt="header"
+                style="width: auto"
+                class="img-fluid"
+              />
+            </picture>
+          </div>
+          <div class="col-md-6">
+            <h1 class="title">Lorem ipsum...</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              provident consequatur magni a deserunt exercitationem iste
+              consectetur beatae magnam quia ullam fugiat, quibusdam sapiente
+              cum aspernatur. Nihil vel itaque nobis similique. Fugiat quasi,
+              perferendis itaque perspiciatis quae veritatis repellendus sunt
+              alias, aperiam temporibus suscipit adipisci in velit dolor enim
+              sit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--COLUMNA DEL BUSCADOR-->
+      <div class="col-12 col-md-3" style="text-align: center">
+        <div class="form-check formulario">
+          <label class="form-check-label" for="flexCheckDefault">
+            Choose your topic:</label
+          >
+          <br /><br />
+          <input
+            class="form-check-input casilla"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Pet-friendly restaurants
+          </label>
+          <br />
+          <input
+            class="form-check-input casilla"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Pet-friendly accommodations
+          </label>
+          <br />
+          <input
+            class="form-check-input casilla"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Mountain routes
+          </label>
+          <br />
+          <input
+            class="form-check-input casilla"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Weekend getaways</label
+          >
+          <br />
+          <input
+            class="form-check-input casilla"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Long trips
+          </label>
+          <br />
+          <input
+            class="form-check-input casilla"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Others</label
+          >
+          <br /><br />
+          <button type="button" class="btn btn-dark boton">Search</button>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+  <div id="pie">
+    <Pie></Pie>
+  </div>
+
+  <!--LINK A BOOSTRAP-->
+  
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <!-- <script src="scripts/scriptIniciarBD.js" type="module"></script> -->
+  
+  <!-- Part script de vue, falta replicar en totes pàgines -->
+  <script src="scripts/scriptHeader.js" type="module"></script>
+  <script src="scripts/scriptIniciarBD.js" type="module"></script>
+  <script src="scripts/scriptFooter.js" type="module"></script>
+</body>
+</html>
